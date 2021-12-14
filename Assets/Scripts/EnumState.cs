@@ -23,6 +23,10 @@ public class EnumState : MonoBehaviour
     {
         switch (currentState)
         {
+            case State.Idle:
+                DoIdle();
+
+                break;
             case State.Jab:
                 DoJab();
 
@@ -44,6 +48,11 @@ public class EnumState : MonoBehaviour
         }
     }
 
+    public void DoIdle()
+    {
+        animator.SetTrigger("Idle");
+        currentState = State.Idle;
+    }
 
     public void DoJab()
     {
@@ -68,9 +77,5 @@ public class EnumState : MonoBehaviour
         animator.SetTrigger("Uppercut");
         currentState = State.Uppercut;
     }
-    /*public void OnJab(currentState)
-    {
-        State currentState = State.Jab;
-        animator.
-    }*/
+   
 }
