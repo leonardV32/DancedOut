@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerJab : MonoBehaviour
 {
-    void JabDodge(InputAction.CallbackContext.ctx)
+    void JabDodge(InputAction.CallbackContext ctx)
     {
         
     }
