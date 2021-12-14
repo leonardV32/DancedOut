@@ -4,35 +4,24 @@ using UnityEngine;
 
 public class EnumState : MonoBehaviour
 {
-   public enum State
-    {   
-        Idle,
-        Jab,
-        Direct,
-        Bodyshot,
-        Uppercut
-    }
 
-    private State state = State.Idle;
-    public int currentState;
-    public GameObject PlayerBodyShot;
-    public GameObject PlayerJab;
-    public GameObject PlayerUpper;
-    public GameObject PlayerDirect;
+    private State startingState = State.Idle;
+    public State currentState;
+    
 
     private Animator animator;
-    private Rigidbody2D rb2D;
-    private SpriteRenderer spriterenderer;
-
+    
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        currentState = startingState;
+
     }
 
 
     private void Update()
     {
-        switch (state)
+        switch (currentState)
         {
             case State.Jab:
                 DoJab();
@@ -59,21 +48,25 @@ public class EnumState : MonoBehaviour
     public void DoJab()
     {
         animator.SetTrigger("Jab");
+        currentState = State.Jab;
     }
-    
+
     public void DoDirect()
     {
         animator.SetTrigger("Direct");
+        currentState = State.Direct;
     }
 
     public void DoBodyshot()
     {
         animator.SetTrigger("Bodyshot");
+        currentState = State.Bodyshot;
     }
 
     public void DoUppercut()
     {
         animator.SetTrigger("Uppercut");
+        currentState = State.Uppercut;
     }
     /*public void OnJab(currentState)
     {

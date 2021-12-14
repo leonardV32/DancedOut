@@ -141,10 +141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  PlayerBodyShot: {fileID: 0}
-  PlayerJab: {fileID: 0}
-  PlayerUpper: {fileID: 0}
-  PlayerDirect: {fileID: 0}
 --- !u!114 &85857094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,26 +235,6 @@ MonoBehaviour:
   m_DefaultActionMap: Fighting
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!111 &85857095
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85857092}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: afd9d1f5f0ab31647a8da845540a0b9f, type: 2}
-  - {fileID: 7400000, guid: b39e0cf07f3b9cb488ac9d99ccdf74a7, type: 2}
-  - {fileID: 7400000, guid: 8d00d8c218f1bda438a2550f1c3cb8bb, type: 2}
-  - {fileID: 7400000, guid: a38aecb89c6dae74f94c815d560ddff5, type: 2}
-  - {fileID: 7400000, guid: 546cd0f150bbe4d4d8141627165e13a9, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!4 &85857098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 53680415445170273, guid: 6255c0eb29af1e04a98a4fbc1bf6faa9, type: 3}
