@@ -24,6 +24,8 @@ public class ComparisonState : MonoBehaviour
         enemyState = enemy.GetComponent<EnumState>().currentState;
         playerState = player.GetComponent<EnumState>().currentState;
     }
+
+    /*A l'input check si y'a un changemetn proche.*/
     public void ChangeState()
     {
         // check changestate avant ou après l'input
