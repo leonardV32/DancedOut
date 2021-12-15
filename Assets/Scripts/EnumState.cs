@@ -15,7 +15,7 @@ public class EnumState : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         currentState = startingState;
-
+        
     }
 
 
