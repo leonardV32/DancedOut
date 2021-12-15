@@ -5,8 +5,8 @@ using UnityEngine;
 public class ComparisonState : MonoBehaviour
 {
 
-    public GameObject player;
-    public GameObject enemy;
+    /*[HideInInspector]*/ public GameObject player;
+    /*[HideInInspector]*/ public GameObject enemy;
     public State enemyState;
     public State playerState;
     private Animator playeranimator;
@@ -14,14 +14,19 @@ public class ComparisonState : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        enemyState = enemy.GetComponent<EnumState>().currentState;    
-        playerState = player.GetComponent<EnumState>().currentState;
+        player = GameObject.FindWithTag("Player");
+        enemy = GameObject.FindWithTag("Enemy");
         playeranimator = player.GetComponent<Animator>();
     }
 
+    private void FixedUpdate()
+    {
+        enemyState = enemy.GetComponent<EnumState>().currentState;
+        playerState = player.GetComponent<EnumState>().currentState;
+    }
     public void ChangeState()
     {
-        
+        // check changestate avant ou après l'input
         if (playerState == enemyState)
         {
             Debug.Log("good");
@@ -31,6 +36,7 @@ public class ComparisonState : MonoBehaviour
         {
             //screenshake
             playeranimator.SetTrigger("Hit");
+            Debug.Log("false move");
         }
     }
 }
