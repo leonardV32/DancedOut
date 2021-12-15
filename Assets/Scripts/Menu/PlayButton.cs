@@ -20,7 +20,7 @@ public class PlayButton : MonoBehaviour
         var screen = Instantiate(ScreenToLoad);
         DontDestroyOnLoad(screen);
 
-        var chargement = SceneManager.LoadSceneAsync("LevelKirby");
+        var chargement = SceneManager.LoadSceneAsync("LoadingScreen");
         chargement.allowSceneActivation = false;
 
         while (chargement.isDone == false)
