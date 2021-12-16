@@ -4,6 +4,7 @@
     Jab,
     Direct,
     Bodyshot,
-    Uppercut
+    Uppercut,
+    Hit
 }
 
