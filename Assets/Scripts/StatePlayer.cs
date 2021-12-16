@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnumState : MonoBehaviour
+public class StatePlayer : MonoBehaviour
 {
 
     private State startingState = State.Idle;
@@ -14,12 +14,13 @@ public class EnumState : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        //Debug.Log(animator.GetCurrentAnimatorStateInfo(0).);
         currentState = startingState;
         
     }
 
 
-    private void Update()
+    /*private void Update()
     {
         switch (currentState)
         {
@@ -46,7 +47,7 @@ public class EnumState : MonoBehaviour
             default:
                 break;
         }
-    }
+    }*/
 
     public void DoIdle()
     {

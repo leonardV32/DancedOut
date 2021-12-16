@@ -19,15 +19,14 @@ public class ComparisonState : MonoBehaviour
         playeranimator = player.GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
-    {
-        enemyState = enemy.GetComponent<EnumState>().currentState;
-        playerState = player.GetComponent<EnumState>().currentState;
-    }
+
 
     /*A l'input check si y'a un changemetn proche.*/
-    public void ChangeState()
+    public void CheckState()
     {
+        //enemyState = enemy.GetComponent<StateEnemy>().currentState;
+        playerState = player.GetComponent<StatePlayer>().currentState;
+        if (enemyState == State.Idle) { Debug.Log("Idle dont touche me !");  return; }
         // check changestate avant ou après l'input
         if (playerState == enemyState)
         {
