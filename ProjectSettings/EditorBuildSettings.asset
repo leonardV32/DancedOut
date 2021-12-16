@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/DanceOutScene/Menu.unity
     guid: 4e1491b9155d65149b6284828f860c08
   - enabled: 1
-    path: Assets/Scenes/DanceOutScene/Game.unity
+    path: Assets/Scenes/DanceOutScene/Sparring.unity
     guid: f6be0bd5019ec974489236c126e608cf
   - enabled: 1
     path: Assets/Scenes/DanceOutScene/Controls.unity
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DanceOutScene/Credits.unity
     guid: 24fd2492734bb0141b90745f77e30a45
+  - enabled: 1
+    path: Assets/Scenes/DanceOutScene/Championship.unity
+    guid: c94c3ed6f383f2541aed07af9ab503f7
   m_configObjects: {}
