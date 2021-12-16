@@ -28,7 +28,6 @@ public class PlayButton : MonoBehaviour
             if (chargement.progress >= 0.9f)
             {
                 chargement.allowSceneActivation = true;
-                screen.GetComponent<Animator>().SetTrigger("Disappear");
                 Destroy(screen);
             }
 
