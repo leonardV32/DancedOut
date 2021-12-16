@@ -7,7 +7,7 @@ public class StatePlayer : MonoBehaviour
 
     private State startingState = State.Idle;
     public State currentState;
-    
+    public bool canMove = true;
 
     private Animator animator;
     
@@ -50,39 +50,64 @@ public class StatePlayer : MonoBehaviour
     }*/
 
     public void DoIdle()
-    {
-        animator.SetTrigger("Idle");
-        currentState = State.Idle;
+    {   
+        if (canMove)
+        {
+            currentState = State.Idle;
+            canMove = false;
+        }
+           
     }
 
     public void DoJab()
     {
-        animator.SetTrigger("Jab");
-        currentState = State.Jab;
+        if (canMove)
+        {
+            currentState = State.Jab;
+            canMove = false;
+        }
     }
 
     public void DoDirect()
     {
-        animator.SetTrigger("Direct");
-        currentState = State.Direct;
+        if (canMove)
+        {
+            currentState = State.Direct;
+            canMove = false;
+        }
     }
 
     public void DoBodyshot()
     {
-        animator.SetTrigger("Bodyshot");
-        currentState = State.Bodyshot;
+        if (canMove)
+        {
+            currentState = State.Bodyshot;
+            canMove = false;
+        }
     }
 
     public void DoUppercut()
     {
-        animator.SetTrigger("Uppercut");
-        currentState = State.Uppercut;
+        if (canMove)
+        {
+            currentState = State.Uppercut;
+            canMove = false;
+        }
     }
 
     public void DoHit()
     {
-        animator.SetTrigger("Hit");
         currentState = State.Hit;
     }
 
+
+    public void LockInput()
+    {
+        canMove = false;
+    }
+
+    public void UnlockInput()
+    {
+        canMove = true;
+    }
 }

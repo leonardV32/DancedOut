@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -1315070060075133424}
   - component: {fileID: 85857093}
   - component: {fileID: 85857094}
+  - component: {fileID: 134420052}
   m_Layer: 0
   m_Name: Player Idle
   m_TagString: Player
@@ -117,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  canMove: 1
 --- !u!114 &85857094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +158,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 134420052}
+        m_TargetAssemblyTypeName: StateComparer, Assembly-CSharp
+        m_MethodName: CheckState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8d915c52-46bd-40df-a4f2-ac7cace65f5e
     m_ActionName: Fighting/Jab[/Keyboard/downArrow]
   - m_PersistentCalls:
@@ -163,6 +177,18 @@ MonoBehaviour:
       - m_Target: {fileID: 85857093}
         m_TargetAssemblyTypeName: EnumState, Assembly-CSharp
         m_MethodName: DoDirect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 134420052}
+        m_TargetAssemblyTypeName: StateComparer, Assembly-CSharp
+        m_MethodName: CheckState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -188,6 +214,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 134420052}
+        m_TargetAssemblyTypeName: StateComparer, Assembly-CSharp
+        m_MethodName: CheckState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b12ea989-95e5-4ac1-bdc3-6d527ad7203c
     m_ActionName: Fighting/Uppercut[/Keyboard/upArrow]
   - m_PersistentCalls:
@@ -204,6 +242,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 134420052}
+        m_TargetAssemblyTypeName: StateComparer, Assembly-CSharp
+        m_MethodName: CheckState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 7f1a304c-d802-4394-a7fe-bdaaadeb51b7
     m_ActionName: Fighting/Bodyshot[/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
@@ -211,3 +261,19 @@ MonoBehaviour:
   m_DefaultActionMap: Fighting
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &134420052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773855007620426233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b87a65ce6ed053498db22d62aae7ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  enemyState: 0
+  playerState: 0
