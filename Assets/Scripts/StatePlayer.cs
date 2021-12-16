@@ -78,5 +78,11 @@ public class StatePlayer : MonoBehaviour
         animator.SetTrigger("Uppercut");
         currentState = State.Uppercut;
     }
-   
+
+    public void DoHit()
+    {
+        animator.SetTrigger("Hit");
+        currentState = State.Hit;
+    }
+
 }

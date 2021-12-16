@@ -24,7 +24,7 @@ public class ComparisonState : MonoBehaviour
     /*A l'input check si y'a un changemetn proche.*/
     public void CheckState()
     {
-        //enemyState = enemy.GetComponent<StateEnemy>().currentState;
+        enemyState = enemy.GetComponent<StateEnemy>().currentState;
         playerState = player.GetComponent<StatePlayer>().currentState;
         if (enemyState == State.Idle) { Debug.Log("Idle dont touche me !");  return; }
         // check changestate avant ou après l'input
