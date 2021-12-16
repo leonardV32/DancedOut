@@ -9,18 +9,15 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Menu/Menu.unity
-    guid: 58cd88876b549e54aa862147d0b25888
+    path: Assets/Scenes/DanceOutScene/Menu.unity
+    guid: 4e1491b9155d65149b6284828f860c08
   - enabled: 1
-    path: Assets/Scenes/Menu/Play.unity
-    guid: c55e4ec71605e0242a7929f193795d45
+    path: Assets/Scenes/DanceOutScene/Game.unity
+    guid: f6be0bd5019ec974489236c126e608cf
   - enabled: 1
-    path: Assets/Scenes/Menu/Loading.unity
-    guid: 1c2808185c180d649add4bb40730f5c8
+    path: Assets/Scenes/DanceOutScene/Controls.unity
+    guid: 7b571cca80870e24b86cc21672057552
   - enabled: 1
-    path: Assets/Scenes/Menu/Controls.unity
-    guid: 82ef4adfc051fb842b84fd6968011326
-  - enabled: 1
-    path: Assets/Scenes/Menu/Credits.unity
-    guid: 6dfcc1c3cc2a5c0419e4da2a92766048
+    path: Assets/Scenes/DanceOutScene/Credits.unity
+    guid: 24fd2492734bb0141b90745f77e30a45
   m_configObjects: {}
