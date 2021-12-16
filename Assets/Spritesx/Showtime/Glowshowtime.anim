@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Animation
+  m_Name: Glowshowtime
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: fb0b5246932ef944eb8d0b666964ef9c, type: 3}
-    - time: 0.33333334
+    - time: 0.18333334
       value: {fileID: 21300000, guid: 05039590f677a3448b3fc2fd686b84af, type: 3}
-    - time: 0.68333334
+    - time: 0.4
       value: {fileID: 21300000, guid: e95269c58e250f441be853dd7eb6d05e, type: 3}
-    - time: 1.0333333
+    - time: 0.5833333
       value: {fileID: 21300000, guid: 78217cb8da51f6f47994816ec550c368, type: 3}
-    - time: 1.3666667
+    - time: 0.76666665
       value: {fileID: 21300000, guid: fae2760b5e2fdf24d8c75c44ef70c2ba, type: 3}
     attribute: m_Sprite
     path: 
@@ -58,7 +58,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.3833333
+    m_StopTime: 0.7833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

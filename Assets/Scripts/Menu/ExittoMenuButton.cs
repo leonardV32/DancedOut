@@ -3,41 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayButton : MonoBehaviour
+public class ExittoMenuButton : MonoBehaviour
 
 {
     [SerializeField] private string SceneName;
     [SerializeField] private GameObject ScreenToLoad;
-    //[SerializeField] private GameObject disapear;
 
 
-  public void LoadSceneAsync()
+    public void LoadSceneAsync()
     {
         StartCoroutine(LoadScreenCoroutine());
     }
 
     IEnumerator LoadScreenCoroutine()
     {
-        //disapear.SetActive(false);
-
         var screen = Instantiate(ScreenToLoad);
         DontDestroyOnLoad(screen);
 
-        var chargement = SceneManager.LoadSceneAsync("Play");
+        var chargement = SceneManager.LoadSceneAsync("Menu");
         chargement.allowSceneActivation = false;
-
-
 
         while (chargement.isDone == false)
         {
             if (chargement.progress >= 0.9f)
             {
                 chargement.allowSceneActivation = true;
-
                 Destroy(screen);
             }
 
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(0);
 
         }
 
