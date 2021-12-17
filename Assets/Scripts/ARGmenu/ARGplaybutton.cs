@@ -6,8 +6,8 @@ using TMPro;
 
 public class ARGplaybutton : MonoBehaviour
 {
-    [SerializeField] GameObject loadingScreen;//Prefab;
-    
+    [SerializeField] GameObject loadingScreen;
+    [SerializeField] GameObject winScreen;
     public void LoadLevel(int sceneIndex)
     {
         StartCoroutine(LoadAsynchronously(sceneIndex));
@@ -28,7 +28,7 @@ public class ARGplaybutton : MonoBehaviour
                 sceneLoading.allowSceneActivation = true;
                 loadingScreen.SetActive(false);
             }
-            yield return null;
+            yield return new WaitForSeconds(1);
         }
     }
 
@@ -49,5 +49,27 @@ public class ARGplaybutton : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("QUIT");
+    }
+    public void Victory(int sceneIndex)
+    {
+        StartCoroutine(BackToMenu(sceneIndex));
+    }
+
+    IEnumerator BackToMenu(int sceneIndex)
+    {
+        winScreen.SetActive(true);
+
+        var sceneLoading = SceneManager.LoadSceneAsync(sceneIndex);
+        sceneLoading.allowSceneActivation = false;
+
+        while (sceneLoading.isDone == false)
+        {
+            if (sceneLoading.progress >= 0.9f)
+            {
+                sceneLoading.allowSceneActivation = true;
+                winScreen.SetActive(false);
+            }
+            yield return new WaitForSeconds(3);
+        }
     }
 }
