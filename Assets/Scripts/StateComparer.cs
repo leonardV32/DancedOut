@@ -10,17 +10,22 @@ public class StateComparer : MonoBehaviour
     public State enemyState;
     public State playerState;
 
+    private StatePlayer statePlayer;
+
     private Animator playeranimator;
+    private AudioSource audioSource;
 
     void Awake()
     {
         player = GameObject.FindWithTag("Player");
         enemy = GameObject.FindWithTag("Enemy");
         playeranimator = player.GetComponent<Animator>();
+        audioSource = player.GetComponent<AudioSource>();
+        statePlayer = player.GetComponent<StatePlayer>();
     }
 
     public void CheckState()
-    {
+    {   
         enemyState = enemy.GetComponent<StateEnemy>().currentState;
         playerState = player.GetComponent<StatePlayer>().currentState;
 
@@ -32,6 +37,9 @@ public class StateComparer : MonoBehaviour
         if (enemyState != playerState)
         {
             playeranimator.SetTrigger("Hit");
+            statePlayer.DoHit();
+            audioSource.Play();
+
         }
 
         else
@@ -43,18 +51,22 @@ public class StateComparer : MonoBehaviour
                     break;
                 case State.Jab:
                     playeranimator.SetTrigger("Jab");
+                    audioSource.Play();
 
                     break;
                 case State.Direct:
                     playeranimator.SetTrigger("Direct");
+                    audioSource.Play();
 
                     break;
                 case State.Bodyshot:
                     playeranimator.SetTrigger("Bodyshot");
+                    audioSource.Play();
 
                     break;
                 case State.Uppercut:
                     playeranimator.SetTrigger("Uppercut");
+                    audioSource.Play();
 
                     break;
                 default:
