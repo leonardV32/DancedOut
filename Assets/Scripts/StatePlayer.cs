@@ -9,12 +9,20 @@ public class StatePlayer : MonoBehaviour
     public State currentState;
     public bool canMove = true;
 
-    private Animator animator;
     
+
+    public AudioClip sonJab;
+    public AudioClip sonDirect;
+    public AudioClip sonBodyshot;
+    public AudioClip sonUppercut;
+    public AudioClip sonHit;
+
+    private AudioSource audioSource;
+
     private void Awake()
     {
-        animator = GetComponent<Animator>();
-        //Debug.Log(animator.GetCurrentAnimatorStateInfo(0).);
+
+        audioSource = this.GetComponent<AudioSource>();
         currentState = startingState;
         
     }
@@ -64,6 +72,7 @@ public class StatePlayer : MonoBehaviour
         if (canMove)
         {
             currentState = State.Jab;
+            audioSource.clip = sonJab;
             canMove = false;
         }
     }
@@ -73,6 +82,7 @@ public class StatePlayer : MonoBehaviour
         if (canMove)
         {
             currentState = State.Direct;
+            audioSource.clip = sonDirect;
             canMove = false;
         }
     }
@@ -82,6 +92,7 @@ public class StatePlayer : MonoBehaviour
         if (canMove)
         {
             currentState = State.Bodyshot;
+            audioSource.clip = sonBodyshot;
             canMove = false;
         }
     }
@@ -91,6 +102,7 @@ public class StatePlayer : MonoBehaviour
         if (canMove)
         {
             currentState = State.Uppercut;
+            audioSource.clip = sonUppercut;
             canMove = false;
         }
     }
@@ -98,6 +110,7 @@ public class StatePlayer : MonoBehaviour
     public void DoHit()
     {
         currentState = State.Hit;
+        audioSource.clip = sonHit;
     }
 
 
